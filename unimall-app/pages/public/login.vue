@@ -109,9 +109,9 @@
 								that.logining = false
 								that.$store.commit('login', res.data)
 								uni.setStorageSync('userInfo', res.data)
-								if (that.$api.prePage().loadData) {
-									that.$api.prePage().loadData()
-								}
+								// if (that.$api.prePage().loadData) {
+									// that.$api.prePage().loadData()
+								// }
 								uni.navigateBack()
 							})
 						})
@@ -132,9 +132,9 @@
 						that.logining = false
 						that.$store.commit('login', res.data)
 						uni.setStorageSync('userInfo', res.data)
-						if (that.$api.prePage().loadData) {
-							that.$api.prePage().loadData()
-						}
+						// if (that.$api.prePage().loadData) {
+						// 	that.$api.prePage().loadData()
+						// }
 						uni.navigateBack()
 					})
 					//#endif
@@ -167,9 +167,9 @@
 									that.$store.commit('login', res.data)
 									that.$api.setUserInfo(res.data)
 								
-									if (that.$api.prePage().loadData) {
-										that.$api.prePage().loadData()
-									}
+									// if (that.$api.prePage().loadData) {
+									// 	that.$api.prePage().loadData()
+									// }
 									uni.hideLoading()
 									uni.navigateBack()
 								})
@@ -177,9 +177,9 @@
 								that.$store.commit('login', res.data)
 								that.$api.setUserInfo(res.data)
 																
-								if (that.$api.prePage().loadData) {
-									that.$api.prePage().loadData()
-								}
+								// if (that.$api.prePage().loadData) {
+								// 	that.$api.prePage().loadData()
+								// }
 								uni.hideLoading()
 								uni.navigateBack()
 							}
@@ -224,9 +224,9 @@
 									})
 								},
 								complete: (e) => {
-									if (that.$api.prePage().loadData) {
-										that.$api.prePage().loadData()
-									}
+									// if (that.$api.prePage().loadData) {
+									// 	that.$api.prePage().loadData()
+									// }
 									uni.hideLoading()
 									uni.navigateBack()
 								}

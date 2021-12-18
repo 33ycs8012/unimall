@@ -92,9 +92,9 @@ public class AdminServiceImpl implements AdminService {
         //短信验证码
         String code = cacheComponent.getRaw(CacheConst.ADMIN_MSG_CODE + adminDO.getPhone());
         boolean isGuest = "guest".equals(username) && "true".equals(unimallSystemProperties.getGuest());
-        if (!isGuest && (code == null || verifyCode == null || !code.equals(verifyCode))) {
-            throw new AdminServiceException(ExceptionDefinition.ADMIN_VERIFYCODE_ERROR);
-        }
+//        if (!isGuest && (code == null || verifyCode == null || !code.equals(verifyCode))) {
+//            throw new AdminServiceException(ExceptionDefinition.ADMIN_VERIFYCODE_ERROR);
+//        }
         if (!MD5Util.verify(password, username, adminDO.getPassword())) {
             throw new AdminServiceException(ExceptionDefinition.ADMIN_PASSWORD_ERROR);
         }
